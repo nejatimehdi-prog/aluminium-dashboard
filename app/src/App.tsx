@@ -1,9 +1,12 @@
 import { lazy, Suspense, useEffect, useState } from 'react';
 import Home from './pages/Home';
-import Soon from './pages/Soon';
 import { useTheme } from './theme';
 
-const Charts = lazy(() => import('./pages/Charts')); // keeps ECharts out of the first load
+// lazy pages keep ECharts out of the first load
+const Charts = lazy(() => import('./pages/Charts'));
+const Forecast = lazy(() => import('./pages/Forecast'));
+const Production = lazy(() => import('./pages/Production'));
+const Trade = lazy(() => import('./pages/Trade'));
 
 const TABS = [
   { id: 'home', label: 'خانه' },
@@ -75,14 +78,12 @@ export default function App() {
 
       <main>
         {tab === 'home' && <Home />}
-        {tab === 'charts' && (
-          <Suspense fallback={<p className="text-sm text-muted">در حال بارگیری نمودار…</p>}>
-            <Charts />
-          </Suspense>
-        )}
-        {tab === 'forecast' && <Soon title="پیش‌بینی" phase="۳" />}
-        {tab === 'production' && <Soon title="تولید شمش ایران" phase="۲" />}
-        {tab === 'trade' && <Soon title="صادرات و واردات" phase="۲" />}
+        <Suspense fallback={<p className="text-sm text-muted">در حال بارگیری…</p>}>
+          {tab === 'charts' && <Charts />}
+          {tab === 'forecast' && <Forecast />}
+          {tab === 'production' && <Production />}
+          {tab === 'trade' && <Trade />}
+        </Suspense>
       </main>
 
       <footer className="mt-10 border-t border-line pt-4 text-xs leading-6 text-muted">

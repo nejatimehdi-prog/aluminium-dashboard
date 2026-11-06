@@ -1,0 +1,323 @@
+{
+ "generated_at": "2026-11-06T19:41:12Z",
+ "unit": "تن",
+ "note": "تولید ماهانهٔ شمش (خالص، آلیاژی، بیلت و اسلب). ایرالکو خودکار از کدال؛ کل کشور و سایر تولیدکنندگان از ورود دستی (production_national.csv).",
+ "months": [
+  {
+   "month": "1404/05",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 13357.0,
+     "pure": 13357.0,
+     "products": {
+      "شمش خالص": 8289.0,
+      "شمش خالص صادراتی": 5068.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=vOOObOOOWHHVAkBMlabHQCoCDvfw%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/06/06 16:51:30",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/06",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 13666.0,
+     "pure": 13666.0,
+     "products": {
+      "شمش خالص": 10692.0,
+      "شمش خالص صادراتی": 2974.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=c0Z3QnictspMOTRqVOOObOOO8Jlg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/09/15 15:41:36",
+     "corrected": true,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/07",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14085.0,
+     "pure": 14085.0,
+     "products": {
+      "شمش خالص": 6542.0,
+      "شمش خالص صادراتی": 7543.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=BcKPvTgxxFg0FszzOhuywg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/10/07 13:33:52",
+     "corrected": true,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/08",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14744.0,
+     "pure": 14744.0,
+     "products": {
+      "شمش خالص": 14397.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 0.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 347.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=gt2WX9zTwtESGForTeWLQg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/10/07 13:34:58",
+     "corrected": true,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/09",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14712.0,
+     "pure": 13262.0,
+     "products": {
+      "شمش خالص": 8534.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 1450.0,
+      "شمش خالص صادراتی": 4728.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=JjE7WbKfzEFaiOZgYs1c0g%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/10/07 14:14:49",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/10",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14795.0,
+     "pure": 14741.0,
+     "products": {
+      "شمش خالص": 7518.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 54.0,
+      "شمش خالص صادراتی": 7223.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=XTguienEmaq1aOOObOOOHY5Zv4OQ%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/11/07 15:28:02",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/11",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14625.0,
+     "pure": 14351.0,
+     "products": {
+      "شمش خالص": 8538.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 274.0,
+      "شمش خالص صادراتی": 5813.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=63PCmbFxOOObOOOZ8em2Xf8EbmrA%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1404/12/06 10:05:08",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1404/12",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14465.0,
+     "pure": 14434.0,
+     "products": {
+      "شمش خالص": 10428.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 31.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 4006.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=wx2dv8bBDYM2ChMZqcIGnw%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/03/27 19:20:22",
+     "corrected": true,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/01",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14862.0,
+     "pure": 14862.0,
+     "products": {
+      "شمش خالص": 1055.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 0.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 13807.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=3cSiUh6tX5o1nZMOGFoP1g%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/02/06 10:51:54",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/02",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 15614.0,
+     "pure": 15614.0,
+     "products": {
+      "شمش خالص": 10758.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 0.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 4856.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=SZyQkeH4QQQaQQQIOOObOOO1jjmjZsrtlg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/03/05 18:11:49",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/03",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 14291.0,
+     "pure": 14291.0,
+     "products": {
+      "شمش خالص": 4746.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 0.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 9545.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=dXkaAKvmROOObOOOqOOJaaB2w6Vw%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/04/08 15:17:35",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/04",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 12492.0,
+     "pure": 12142.0,
+     "products": {
+      "شمش خالص": 8018.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 350.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 4124.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=OoeTCqQQQaQQQQpfCYAJNtGOeoZA%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/05/07 13:38:20",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/05",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 11639.0,
+     "pure": 11639.0,
+     "products": {
+      "شمش خالص": 8432.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 0.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 3207.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=IFYMgQQQaQQQZFaDGnigl7nVd6Fg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/06/07 17:51:51",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/06",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 11550.0,
+     "pure": 11151.0,
+     "products": {
+      "شمش خالص": 3523.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 399.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 7628.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=wohzSLbvMOOObOOOWzQQQaQQQR3Xpyf4Gg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/07/29 13:55:33",
+     "corrected": true,
+     "auto": true
+    }
+   }
+  },
+  {
+   "month": "1405/07",
+   "producers": {
+    "ایرالکو": {
+     "tonnes": 6431.0,
+     "pure": 5805.0,
+     "products": {
+      "شمش خالص": 0.0,
+      "شمش آلیاژ": 0.0,
+      "شمش بیلت": 626.0,
+      "شمش بیلت صادراتی": 0.0,
+      "شمش خالص صادراتی": 5805.0
+     },
+     "source": "کدال — گزارش فعالیت ماهانه فایرا",
+     "source_url": "https://www.codal.ir/Reports/Decision.aspx?LetterSerial=LBb2ezlSqLAe9m05KosHZg%3d%3d&rt=0&let=58&ct=0&ft=-1",
+     "published_at": "1405/08/06 16:17:47",
+     "corrected": false,
+     "auto": true
+    }
+   }
+  }
+ ],
+ "summary": {
+  "last_month": "1405/07",
+  "months_3": ["1405/05", "1405/06", "1405/07"],
+  "producers": {
+   "ایرالکو": {
+    "last_month": 6431.0,
+    "sum_3m": 29620.0,
+    "months_with_data": 3
+   }
+  },
+  "national": null
+ },
+ "stale": false
+}

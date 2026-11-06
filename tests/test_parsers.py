@@ -118,3 +118,5 @@ def test_dumps_roundtrip():
     obj = {"a": [["2026-01-01", 1.5], ["2026-01-02", 2]], "b": {"c": None}}
     assert json.loads(dumps(obj)) == obj
     assert '["2026-01-01", 1.5]' in dumps(obj)
+    # int keys become string keys, exactly like json.dumps
+    assert json.loads(dumps({5: {22: 1}})) == {"5": {"22": 1}}

@@ -83,6 +83,92 @@ async function getJson<T>(path: string): Promise<T> {
   return r.json() as Promise<T>;
 }
 
+// ---- phase 2/3 files
+
+export interface ProducerMonth {
+  tonnes: number;
+  pure?: number;
+  products?: Record<string, number>;
+  source: string;
+  source_url?: string;
+  published_at?: string;
+  corrected?: boolean;
+  note?: string | null;
+  auto: boolean;
+}
+export interface Production {
+  generated_at: string;
+  unit: string;
+  note: string;
+  stale?: boolean;
+  months: { month: string; producers: Record<string, ProducerMonth> }[];
+  summary: null | {
+    last_month: string;
+    months_3: string[];
+    producers: Record<string, { last_month: number | null; sum_3m: number; months_with_data: number }>;
+    national: { last_month: number | null; sum_3m: number; months_with_data: number } | null;
+  };
+}
+
+export interface TradeTotals {
+  tonnes: number;
+  usd: number;
+  reporters: number;
+  weight_missing: number;
+  top_partners: { code: number; name: string; tonnes: number; usd: number }[] | null;
+}
+type FlowCats = Record<'ingot' | 'scrap' | 'products', TradeTotals>;
+export interface Trade {
+  generated_at: string;
+  categories: Record<string, string>;
+  source: string;
+  source_url: string;
+  notes: string[];
+  stale?: boolean;
+  comtrade: { year: string; fetched_at: string; reported: Partial<Record<'export' | 'import', FlowCats>>; mirror: Partial<Record<'export' | 'import', FlowCats>> }[];
+  customs: { period: string; flow: 'export' | 'import'; category: 'ingot' | 'scrap' | 'products'; tonnes: number; usd: number | null; source: string; note: string | null }[];
+}
+
+type Scen = Record<'pessimistic' | 'base' | 'optimistic', number[]>;
+export interface Forecast {
+  generated_at: string;
+  as_of: { lme: string; iran: string; fx: string | null };
+  mode: 'regression' | 'implied_ratio';
+  mode_fa: string;
+  fx_points: number;
+  fx_id: string;
+  fx_pairs: number;
+  min_pairs: number;
+  horizons: { bdays: number; label: string; target: string }[];
+  percentiles: number[];
+  iran: {
+    title: string; unit: string; last: number; last_date: string; scenarios: Scen;
+    fan: [string, number, number, number][];
+    backtest: Record<string, { mape: number | null; coverage: number | null; n: number }>;
+  };
+  lme: {
+    title: string; unit: string; last: number; last_date: string; model: string; model_fa: string; scenarios: Scen;
+    fan: [string, number, number, number][];
+    backtest: { mape: Record<string, Record<string, number>>; origins: number; from: string; to: string };
+    mean_mape: Record<string, number>;
+  };
+  side: { title: string; unit: string; last: number; scenarios: Scen; vol_multiplier: number };
+  regression: null | { a: number; b: number; r2: number; n: number; resid_std: number; fx_id: string; from: string; to: string };
+  assumptions: {
+    disclaimer: string;
+    scenarios: Record<'pessimistic' | 'base' | 'optimistic', { label: string; percentile: number; description: string }>;
+    assumptions: string[];
+    fx_vol_multiplier: number;
+    bootstrap_window_days: number;
+    n_paths: number;
+  };
+  history: { iran: [string, number][]; lme: [string, number][] };
+}
+
+export const loadProduction = () => getJson<Production>('production.json');
+export const loadTrade = () => getJson<Trade>('trade.json');
+export const loadForecast = () => getJson<Forecast>('forecast.json');
+
 export const loadLatest = () => getJson<Latest>('latest.json');
 export const loadStatus = () => getJson<Status>('status.json');
 

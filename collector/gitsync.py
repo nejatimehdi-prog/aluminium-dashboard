@@ -63,6 +63,10 @@ def resolve_conflicts() -> None:
             merged = merge_series(_stage(f, 2), _stage(f, 3))
         elif f == "data/latest.json":
             merged = _stage(f, 2)  # rebuilt after the rebase
+        elif f in ("data/forecast.json", "data/production.json", "data/trade.json"):
+            # written by one workflow at a time; keep the newer one
+            a, b = _stage(f, 2), _stage(f, 3)
+            merged = b if (b.get("generated_at") or "") >= (a.get("generated_at") or "") else a
         else:
             raise RuntimeError(f"conflict in {f} cannot be resolved automatically")
         (ROOT / f).write_text(dumps(merged) + "\n", encoding="utf-8", newline="\n")
@@ -87,7 +91,7 @@ def pull_rebase() -> None:
 
 
 def sync(message: str) -> bool:
-    git("add", "data")
+    git("add", *[p for p in ("data", "docs/model.md") if (ROOT / p).exists()])
     if git("diff", "--cached", "--quiet", check=False).returncode == 0:
         print("no data changes")
         return False

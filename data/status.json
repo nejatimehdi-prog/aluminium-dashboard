@@ -50,12 +50,28 @@
   },
   "summary": {
    "title": "ساخت latest.json",
-   "last_attempt": "2026-11-06T19:13:44Z",
+   "last_attempt": "2026-11-06T19:51:09Z",
    "ok": true,
-   "last_success": "2026-11-06T19:13:44Z",
+   "last_success": "2026-11-06T19:51:09Z",
    "error": null,
    "note": "5/7 cards with data"
+  },
+  "production": {
+   "title": "تولید — کدال و ورود دستی",
+   "last_attempt": "2026-11-06T19:39:52Z",
+   "ok": true,
+   "last_success": "2026-11-06T19:39:52Z",
+   "error": null,
+   "note": "15 Codal reports, 0 manual rows, last month 1405/07"
+  },
+  "forecast": {
+   "title": "پیش‌بینی و بک‌تست",
+   "last_attempt": "2026-11-06T19:52:34Z",
+   "ok": true,
+   "last_success": "2026-11-06T19:52:34Z",
+   "error": null,
+   "note": "mode=implied_ratio, LME model=ets, Iran 1m base=753,956 toman/kg"
   }
  },
- "updated_at": "2026-11-06T19:13:44Z"
+ "updated_at": "2026-11-06T19:52:47Z"
 }

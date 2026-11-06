@@ -14,7 +14,8 @@ export const faNum = (v: number | null | undefined, digits = 0) => (v == null ||
 /** 1.2 → «+۱٫۲٪» (sign shown explicitly, LTR-isolated so it stays on the left of the digits) */
 export function faPct(v: number | null | undefined, digits = 1) {
   if (v == null) return '—';
-  const s = v > 0 ? '+' : v < 0 ? '−' : '';
+  const r = Number(v.toFixed(digits)); // no sign on a value that rounds to zero («−۰٪»)
+  const s = r > 0 ? '+' : r < 0 ? '−' : '';
   return `⁦${s}${fmt(digits).format(Math.abs(v))}٪⁩`;
 }
 
@@ -38,6 +39,21 @@ export function faDateTime(iso: string | undefined) {
 export function faAgo(iso: string | undefined) {
   if (!iso) return '—';
   return faDigits(formatDistanceToNowStrict(new Date(iso), { locale: faIR, addSuffix: true }));
+}
+
+const J_MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
+/** "1405/07" → «مهر ۱۴۰۵» */
+export function faJMonth(m: string, withYear = true) {
+  const [y, mm] = m.split('/');
+  return `${J_MONTHS[+mm - 1]}${withYear ? ` ${faDigits(y)}` : ''}`;
+}
+
+/** 12345678 → «۱۲٫۳ میلیون» */
+export function faUsd(v: number | null | undefined) {
+  if (v == null) return '—';
+  if (v >= 1e9) return `${faNum(v / 1e9, 2)} میلیارد دلار`;
+  if (v >= 1e6) return `${faNum(v / 1e6, 1)} میلیون دلار`;
+  return `${faNum(v)} دلار`;
 }
 
 export const faShortDate = (iso: string) => faDigits(format(new Date(`${iso}T12:00:00`), 'd MMMM', { locale: faIR }));

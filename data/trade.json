@@ -1,0 +1,1148 @@
+{
+ "generated_at": "2026-11-06T19:28:44Z",
+ "unit": "تن",
+ "categories": {
+  "ingot": "شمش (7601)",
+  "scrap": "ضایعات (7602)",
+  "products": "محصولات (7604 تا 7616)"
+ },
+ "source": "UN Comtrade (comtradeapi.un.org، نسخهٔ رایگان preview)",
+ "source_url": "https://comtradeplus.un.org/",
+ "notes": ["«گزارش ایران»: آماری که خود ایران به سازمان ملل داده؛ معمولاً با ۲ تا ۳ سال تأخیر.", "«آینه‌ای»: آنچه کشورهای طرف تجاری از تجارت با ایران گزارش کرده‌اند؛ صادرات ایران = واردات آن‌ها از ایران. سال‌های اخیر ناقص است چون همهٔ کشورها گزارش نداده‌اند.", "دادهٔ آینه‌ای و گزارش ایران به‌دلیل زمان ثبت، ارزش CIF/FOB و قاچاق/ترانزیت با هم برابر نیستند."],
+ "comtrade": [
+  {
+   "year": "2021",
+   "fetched_at": "2026-11-06T19:24:31Z",
+   "reported": {
+    "export": {
+     "ingot": {
+      "tonnes": 265555.5,
+      "usd": 676336844,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "scrap": {
+      "tonnes": 0.0,
+      "usd": 0,
+      "reporters": 0,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "products": {
+      "tonnes": 48619.7,
+      "usd": 138069211,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 106294.9,
+      "usd": 143511208,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "scrap": {
+      "tonnes": 5621.1,
+      "usd": 4659469,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "products": {
+      "tonnes": 51952.8,
+      "usd": 194458291,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     }
+    }
+   },
+   "mirror": {
+    "export": {
+     "ingot": {
+      "tonnes": 183595.0,
+      "usd": 498500859,
+      "reporters": 8,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 162780.2,
+        "usd": 449350031
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 20183.5,
+        "usd": 47289937
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 554.5,
+        "usd": 1620085
+       },
+       {
+        "code": 380,
+        "name": "ایتالیا",
+        "tonnes": 44.0,
+        "usd": 175164
+       },
+       {
+        "code": 702,
+        "name": "کد 702",
+        "tonnes": 25.1,
+        "usd": 53928
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 14282.9,
+      "usd": 30405365,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 14209.4,
+        "usd": 30309628
+       },
+       {
+        "code": 410,
+        "name": "کره جنوبی",
+        "tonnes": 73.5,
+        "usd": 95737
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 26956.2,
+      "usd": 20685560,
+      "reporters": 56,
+      "weight_missing": 2,
+      "top_partners": [
+       {
+        "code": 368,
+        "name": "عراق",
+        "tonnes": 20027.8,
+        "usd": 3867517
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 2015.1,
+        "usd": 5846458
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 1425.4,
+        "usd": 3095309
+       },
+       {
+        "code": 100,
+        "name": "کد 100",
+        "tonnes": 764.4,
+        "usd": 419812
+       },
+       {
+        "code": 724,
+        "name": "کد 724",
+        "tonnes": 724.7,
+        "usd": 1925781
+       }
+      ]
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 996.3,
+      "usd": 2488804,
+      "reporters": 4,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 710,
+        "name": "کد 710",
+        "tonnes": 650.9,
+        "usd": 1618841
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 298.7,
+        "usd": 674450
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 38.5,
+        "usd": 172349
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 8.3,
+        "usd": 23164
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 74.7,
+      "usd": 133910,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 50.9,
+        "usd": 88988
+       },
+       {
+        "code": 124,
+        "name": "کد 124",
+        "tonnes": 23.9,
+        "usd": 44922
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 25167.8,
+      "usd": 104304248,
+      "reporters": 32,
+      "weight_missing": 2,
+      "top_partners": [
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 21784.9,
+        "usd": 83267565
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 1686.0,
+        "usd": 10006222
+       },
+       {
+        "code": 276,
+        "name": "آلمان",
+        "tonnes": 534.8,
+        "usd": 3728480
+       },
+       {
+        "code": 784,
+        "name": "امارات",
+        "tonnes": 473.5,
+        "usd": 1841113
+       },
+       {
+        "code": 144,
+        "name": "کد 144",
+        "tonnes": 143.2,
+        "usd": 1041992
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "year": "2022",
+   "fetched_at": "2026-11-06T19:25:31Z",
+   "reported": {
+    "export": {
+     "ingot": {
+      "tonnes": 405367.3,
+      "usd": 1010472202,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "scrap": {
+      "tonnes": 0.0,
+      "usd": 0,
+      "reporters": 0,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "products": {
+      "tonnes": 68568.5,
+      "usd": 199182485,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 105352.8,
+      "usd": 155203215,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "scrap": {
+      "tonnes": 4240.9,
+      "usd": 4286092,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "products": {
+      "tonnes": 57081.9,
+      "usd": 247053610,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     }
+    }
+   },
+   "mirror": {
+    "export": {
+     "ingot": {
+      "tonnes": 334224.2,
+      "usd": 941876761,
+      "reporters": 9,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 264898.4,
+        "usd": 776486678
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 57827.9,
+        "usd": 133810507
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 9857.0,
+        "usd": 27546054
+       },
+       {
+        "code": 724,
+        "name": "کد 724",
+        "tonnes": 1003.5,
+        "usd": 2801210
+       },
+       {
+        "code": 380,
+        "name": "ایتالیا",
+        "tonnes": 214.6,
+        "usd": 698340
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 13311.0,
+      "usd": 34093956,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 13285.6,
+        "usd": 34063306
+       },
+       {
+        "code": 784,
+        "name": "امارات",
+        "tonnes": 25.4,
+        "usd": 30650
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 25776.3,
+      "usd": 58146253,
+      "reporters": 56,
+      "weight_missing": 2,
+      "top_partners": [
+       {
+        "code": 368,
+        "name": "عراق",
+        "tonnes": 12241.1,
+        "usd": 18427049
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 3839.7,
+        "usd": 10993302
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 2978.6,
+        "usd": 9206243
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 1851.5,
+        "usd": 6500812
+       },
+       {
+        "code": 724,
+        "name": "کد 724",
+        "tonnes": 1238.1,
+        "usd": 3017640
+       }
+      ]
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 828.3,
+      "usd": 1988260,
+      "reporters": 5,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 696.2,
+        "usd": 1486496
+       },
+       {
+        "code": 784,
+        "name": "امارات",
+        "tonnes": 49.9,
+        "usd": 137284
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 47.1,
+        "usd": 146134
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 35.0,
+        "usd": 218142
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 0.1,
+        "usd": 203
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 23.0,
+      "usd": 12650,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 762,
+        "name": "تاجیکستان",
+        "tonnes": 23.0,
+        "usd": 12650
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 25797.9,
+      "usd": 127350198,
+      "reporters": 36,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 21317.8,
+        "usd": 97006584
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 1966.6,
+        "usd": 12661743
+       },
+       {
+        "code": 784,
+        "name": "امارات",
+        "tonnes": 441.2,
+        "usd": 2145351
+       },
+       {
+        "code": 276,
+        "name": "آلمان",
+        "tonnes": 382.2,
+        "usd": 2718354
+       },
+       {
+        "code": 699,
+        "name": "هند",
+        "tonnes": 364.0,
+        "usd": 2293218
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "year": "2023",
+   "fetched_at": "2026-11-06T19:26:33Z",
+   "reported": {
+    "export": {
+     "ingot": {
+      "tonnes": 285147.7,
+      "usd": 634496244,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "scrap": {
+      "tonnes": 0.0,
+      "usd": 0,
+      "reporters": 0,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "products": {
+      "tonnes": 70278.6,
+      "usd": 205419173,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 92741.0,
+      "usd": 139688802,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "scrap": {
+      "tonnes": 3665.5,
+      "usd": 6518741,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     },
+     "products": {
+      "tonnes": 57468.8,
+      "usd": 266487426,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": null
+     }
+    }
+   },
+   "mirror": {
+    "export": {
+     "ingot": {
+      "tonnes": 224920.7,
+      "usd": 530992963,
+      "reporters": 10,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 157363.3,
+        "usd": 375472208
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 59695.2,
+        "usd": 136387903
+       },
+       {
+        "code": 380,
+        "name": "ایتالیا",
+        "tonnes": 4169.4,
+        "usd": 10312008
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 3105.0,
+        "usd": 7728668
+       },
+       {
+        "code": 458,
+        "name": "مالزی",
+        "tonnes": 471.5,
+        "usd": 942377
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 3981.4,
+      "usd": 7540845,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 3959.9,
+        "usd": 7499170
+       },
+       {
+        "code": 410,
+        "name": "کره جنوبی",
+        "tonnes": 21.5,
+        "usd": 41675
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 40082.9,
+      "usd": 67585350,
+      "reporters": 58,
+      "weight_missing": 2,
+      "top_partners": [
+       {
+        "code": 368,
+        "name": "عراق",
+        "tonnes": 26909.1,
+        "usd": 27572604
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 5020.8,
+        "usd": 13391169
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 2560.2,
+        "usd": 9935587
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 1831.2,
+        "usd": 6574145
+       },
+       {
+        "code": 100,
+        "name": "کد 100",
+        "tonnes": 616.7,
+        "usd": 2072099
+       }
+      ]
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 1895.6,
+      "usd": 4464996,
+      "reporters": 7,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 823.5,
+        "usd": 2009193
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 506.0,
+        "usd": 1099950
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 454.1,
+        "usd": 1020810
+       },
+       {
+        "code": 398,
+        "name": "قزاقستان",
+        "tonnes": 60.0,
+        "usd": 72000
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 45.0,
+        "usd": 214000
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 74.8,
+      "usd": 113714,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 784,
+        "name": "امارات",
+        "tonnes": 48.9,
+        "usd": 66862
+       },
+       {
+        "code": 124,
+        "name": "کد 124",
+        "tonnes": 25.9,
+        "usd": 46853
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 27383.8,
+      "usd": 116753849,
+      "reporters": 36,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 22843.1,
+        "usd": 88051905
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 2167.2,
+        "usd": 14270811
+       },
+       {
+        "code": 764,
+        "name": "کد 764",
+        "tonnes": 684.9,
+        "usd": 2348925
+       },
+       {
+        "code": 414,
+        "name": "کویت",
+        "tonnes": 344.4,
+        "usd": 2246272
+       },
+       {
+        "code": 784,
+        "name": "امارات",
+        "tonnes": 335.6,
+        "usd": 1529342
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "year": "2024",
+   "fetched_at": "2026-11-06T19:27:36Z",
+   "reported": {},
+   "mirror": {
+    "export": {
+     "ingot": {
+      "tonnes": 249068.4,
+      "usd": 616907934,
+      "reporters": 10,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 168730.2,
+        "usd": 422826587
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 75410.8,
+        "usd": 182982079
+       },
+       {
+        "code": 380,
+        "name": "ایتالیا",
+        "tonnes": 3226.8,
+        "usd": 8238411
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 594.8,
+        "usd": 1568774
+       },
+       {
+        "code": 368,
+        "name": "عراق",
+        "tonnes": 430.9,
+        "usd": 116584
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 6198.3,
+      "usd": 13478986,
+      "reporters": 3,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 6073.6,
+        "usd": 13204859
+       },
+       {
+        "code": 616,
+        "name": "کد 616",
+        "tonnes": 76.8,
+        "usd": 180394
+       },
+       {
+        "code": 410,
+        "name": "کره جنوبی",
+        "tonnes": 48.0,
+        "usd": 93733
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 27410.8,
+      "usd": 41351766,
+      "reporters": 52,
+      "weight_missing": 6,
+      "top_partners": [
+       {
+        "code": 368,
+        "name": "عراق",
+        "tonnes": 15679.3,
+        "usd": 5559244
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 4465.0,
+        "usd": 12015379
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 1720.1,
+        "usd": 5871076
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 1583.7,
+        "usd": 6179727
+       },
+       {
+        "code": 807,
+        "name": "کد 807",
+        "tonnes": 1193.0,
+        "usd": 3715003
+       }
+      ]
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 1678.3,
+      "usd": 3907703,
+      "reporters": 4,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 1212.9,
+        "usd": 3106702
+       },
+       {
+        "code": 398,
+        "name": "قزاقستان",
+        "tonnes": 339.0,
+        "usd": 406787
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 115.4,
+        "usd": 352744
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 11.0,
+        "usd": 41470
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 0.6,
+      "usd": 1351,
+      "reporters": 1,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 0.6,
+        "usd": 1351
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 29665.3,
+      "usd": 124844857,
+      "reporters": 30,
+      "weight_missing": 1,
+      "top_partners": [
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 26797.1,
+        "usd": 99675900
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 1497.9,
+        "usd": 12748037
+       },
+       {
+        "code": 414,
+        "name": "کویت",
+        "tonnes": 481.2,
+        "usd": 4332733
+       },
+       {
+        "code": 144,
+        "name": "کد 144",
+        "tonnes": 196.3,
+        "usd": 1363673
+       },
+       {
+        "code": 458,
+        "name": "مالزی",
+        "tonnes": 158.0,
+        "usd": 611621
+       }
+      ]
+     }
+    }
+   }
+  },
+  {
+   "year": "2025",
+   "fetched_at": "2026-11-06T19:28:44Z",
+   "reported": {},
+   "mirror": {
+    "export": {
+     "ingot": {
+      "tonnes": 208255.1,
+      "usd": 556864091,
+      "reporters": 7,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 187369.7,
+        "usd": 504850113
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 17936.7,
+        "usd": 44658557
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 1330.8,
+        "usd": 3617097
+       },
+       {
+        "code": 380,
+        "name": "ایتالیا",
+        "tonnes": 1025.5,
+        "usd": 3043027
+       },
+       {
+        "code": 458,
+        "name": "مالزی",
+        "tonnes": 502.9,
+        "usd": 611058
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 4088.2,
+      "usd": 9366079,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 4077.2,
+        "usd": 9355363
+       },
+       {
+        "code": 586,
+        "name": "پاکستان",
+        "tonnes": 11.0,
+        "usd": 10716
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 9729.4,
+      "usd": 29611307,
+      "reporters": 48,
+      "weight_missing": 2,
+      "top_partners": [
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 3838.8,
+        "usd": 11257767
+       },
+       {
+        "code": 51,
+        "name": "ارمنستان",
+        "tonnes": 1345.0,
+        "usd": 5439525
+       },
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 1195.5,
+        "usd": 3512404
+       },
+       {
+        "code": 512,
+        "name": "عمان",
+        "tonnes": 880.4,
+        "usd": 938619
+       },
+       {
+        "code": 724,
+        "name": "کد 724",
+        "tonnes": 759.7,
+        "usd": 2767084
+       }
+      ]
+     }
+    },
+    "import": {
+     "ingot": {
+      "tonnes": 654.5,
+      "usd": 1921562,
+      "reporters": 4,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 31,
+        "name": "آذربایجان",
+        "tonnes": 371.0,
+        "usd": 1072735
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 235.5,
+        "usd": 615397
+       },
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 47.0,
+        "usd": 230305
+       },
+       {
+        "code": 699,
+        "name": "هند",
+        "tonnes": 1.0,
+        "usd": 3124
+       }
+      ]
+     },
+     "scrap": {
+      "tonnes": 78.2,
+      "usd": 171401,
+      "reporters": 2,
+      "weight_missing": 0,
+      "top_partners": [
+       {
+        "code": 36,
+        "name": "کد 36",
+        "tonnes": 58.0,
+        "usd": 131077
+       },
+       {
+        "code": 188,
+        "name": "کد 188",
+        "tonnes": 20.2,
+        "usd": 40324
+       }
+      ]
+     },
+     "products": {
+      "tonnes": 17709.5,
+      "usd": 81084874,
+      "reporters": 28,
+      "weight_missing": 2,
+      "top_partners": [
+       {
+        "code": 156,
+        "name": "چین",
+        "tonnes": 14511.4,
+        "usd": 57919141
+       },
+       {
+        "code": 792,
+        "name": "ترکیه",
+        "tonnes": 1565.7,
+        "usd": 12752617
+       },
+       {
+        "code": 414,
+        "name": "کویت",
+        "tonnes": 1043.8,
+        "usd": 5679233
+       },
+       {
+        "code": 410,
+        "name": "کره جنوبی",
+        "tonnes": 216.9,
+        "usd": 1456405
+       },
+       {
+        "code": 458,
+        "name": "مالزی",
+        "tonnes": 78.4,
+        "usd": 294305
+       }
+      ]
+     }
+    }
+   }
+  }
+ ],
+ "customs": [],
+ "stale": false
+}

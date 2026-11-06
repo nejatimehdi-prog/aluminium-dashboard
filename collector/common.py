@@ -74,7 +74,8 @@ def dumps(o: Any, level: int = 0) -> str:
     if isinstance(o, dict):
         if not o:
             return "{}"
-        items = [f"{pad} {json.dumps(k, ensure_ascii=False)}: {dumps(v, level + 1)}" for k, v in o.items()]
+        # keys are always strings in JSON (json.dumps would quote an int key; do the same)
+        items = [f"{pad} {json.dumps(str(k), ensure_ascii=False)}: {dumps(v, level + 1)}" for k, v in o.items()]
         return "{\n" + ",\n".join(items) + "\n" + pad + "}"
     if isinstance(o, list):
         if all(not isinstance(x, (dict, list)) for x in o):
