@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T20:13:01Z",
+ "generated_at": "2026-11-06T21:10:14Z",
  "order": ["lme_cash", "comex", "shfe", "ime_ingot", "iran_free_market", "fx_free", "fx_ime"],
  "cards": {
   "lme_cash": {
@@ -29,7 +29,7 @@
    "source_url": "https://finance.yahoo.com/quote/ALI=F",
    "freq": "intraday",
    "id": "comex",
-   "fetched_at": "2026-11-06T20:12:57Z",
+   "fetched_at": "2026-11-06T21:10:12Z",
    "value": 3199.75,
    "date": "2026-11-06",
    "time": "2026-11-06T19:31:30Z",
@@ -48,7 +48,7 @@
    "source_url": "https://finance.sina.com.cn/futures/quotes/AL0.shtml",
    "freq": "daily",
    "id": "shfe",
-   "fetched_at": "2026-11-06T20:13:00Z",
+   "fetched_at": "2026-11-06T21:10:13Z",
    "value": 3449.9,
    "date": "2026-11-06",
    "prev_date": "2026-11-05",
@@ -143,7 +143,7 @@
    "source_url": "",
    "freq": "manual",
    "id": "iran_free_market",
-   "fetched_at": "2026-11-06T20:13:01Z",
+   "fetched_at": "2026-11-06T21:10:14Z",
    "value": null,
    "stale": true,
    "stale_reason": "هنوز داده‌ای ثبت نشده"
@@ -157,7 +157,7 @@
    "source_url": "",
    "freq": "manual",
    "id": "fx_free",
-   "fetched_at": "2026-11-06T20:13:01Z",
+   "fetched_at": "2026-11-06T21:10:14Z",
    "value": null,
    "stale": true,
    "stale_reason": "هنوز داده‌ای ثبت نشده"
