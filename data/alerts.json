@@ -1,6 +1,6 @@
 {
- "generated_at": "2026-11-06T20:04:29Z",
- "configured": false,
+ "generated_at": "2026-11-06T20:13:01Z",
+ "configured": true,
  "rules": [
   {
    "id": "lme_above",
@@ -68,8 +68,8 @@
    "op": "change_above",
    "value": 3,
    "enabled": true,
-   "last_key": null,
-   "last_sent_at": null,
+   "last_key": "date:2026-11-01",
+   "last_sent_at": "2026-11-06T20:13:01Z",
    "last_message": "بورس کالا — شمش خالص: ۳٫۵٪ افزایش — اکنون ۷۴۴٬۴۳۹ تومان بر کیلوگرم (۱۴۰۵/۰۸/۱۰)",
    "status": "met",
    "current": 744439
