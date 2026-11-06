@@ -1,0 +1,101 @@
+{
+ "generated_at": "2026-11-06T20:04:29Z",
+ "configured": false,
+ "rules": [
+  {
+   "id": "lme_above",
+   "series": "lme_cash",
+   "op": "above",
+   "value": 3400,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "not_met",
+   "current": 3160.0
+  },
+  {
+   "id": "lme_below",
+   "series": "lme_cash",
+   "op": "below",
+   "value": 2950,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "not_met",
+   "current": 3160.0
+  },
+  {
+   "id": "lme_move",
+   "series": "lme_cash",
+   "op": "change_above",
+   "value": 2.5,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "not_met",
+   "current": 3160.0
+  },
+  {
+   "id": "ime_above",
+   "series": "ime_ingot",
+   "op": "above",
+   "value": 800000,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "not_met",
+   "current": 744439
+  },
+  {
+   "id": "ime_below",
+   "series": "ime_ingot",
+   "op": "below",
+   "value": 700000,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "not_met",
+   "current": 744439
+  },
+  {
+   "id": "ime_move",
+   "series": "ime_ingot",
+   "op": "change_above",
+   "value": 3,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": "بورس کالا — شمش خالص: ۳٫۵٪ افزایش — اکنون ۷۴۴٬۴۳۹ تومان بر کیلوگرم (۱۴۰۵/۰۸/۱۰)",
+   "status": "met",
+   "current": 744439
+  },
+  {
+   "id": "gap_above",
+   "series": "gap",
+   "op": "above",
+   "value": 40,
+   "enabled": false,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "disabled"
+  },
+  {
+   "id": "ime_stale",
+   "series": "ime_ingot",
+   "op": "stale",
+   "value": null,
+   "enabled": true,
+   "last_key": null,
+   "last_sent_at": null,
+   "last_message": null,
+   "status": "not_met",
+   "current": 744439
+  }
+ ]
+}

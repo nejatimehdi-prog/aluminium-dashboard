@@ -49,6 +49,12 @@ jobs:
         run: python collect_iran.py --no-push
         continue-on-error: true
 
+      - name: price alerts (ntfy; the topic is a repository secret)
+        run: python check_alerts.py
+        continue-on-error: true
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+
       - name: commit & push data
         id: sync
         run: |

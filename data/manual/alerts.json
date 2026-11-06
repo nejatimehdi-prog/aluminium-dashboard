@@ -1,0 +1,20 @@
+{
+ "_help": [
+  "قانون‌های هشدار قیمت. بعد از هر اجرای «collect prices» (هر ۳۰ دقیقه) بررسی می‌شوند و از طریق ntfy به گوشی می‌رسند.",
+  "series: lme_cash | comex | shfe | ime_ingot | iran_free_market | fx_free | fx_ime | gap",
+  "op: above (بالاتر از value) | below (پایین‌تر از value) | change_above (تغییر نسبت به نقطهٔ قبل، قدر مطلق درصد، بیشتر از value) | stale (منبع به‌روز نشده)",
+  "واحد value همان واحد سری است: LME/COMEX/SHFE دلار بر تن، بورس کالا و بازار آزاد تومان بر کیلوگرم، ارز تومان بر دلار، gap درصد.",
+  "هشدار above/below فقط وقتی شرط تازه برقرار می‌شود یک بار فرستاده می‌شود؛ change_above یک بار برای هر دادهٔ جدید؛ stale یک بار در روز.",
+  "برای خاموش کردن یک قانون، enabled را false کنید."
+ ],
+ "rules": [
+  {"id": "lme_above", "series": "lme_cash", "op": "above", "value": 3400, "enabled": true},
+  {"id": "lme_below", "series": "lme_cash", "op": "below", "value": 2950, "enabled": true},
+  {"id": "lme_move", "series": "lme_cash", "op": "change_above", "value": 2.5, "enabled": true},
+  {"id": "ime_above", "series": "ime_ingot", "op": "above", "value": 800000, "enabled": true},
+  {"id": "ime_below", "series": "ime_ingot", "op": "below", "value": 700000, "enabled": true},
+  {"id": "ime_move", "series": "ime_ingot", "op": "change_above", "value": 3, "enabled": true},
+  {"id": "gap_above", "series": "gap", "op": "above", "value": 40, "enabled": false},
+  {"id": "ime_stale", "series": "ime_ingot", "op": "stale", "enabled": true}
+ ]
+}

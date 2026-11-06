@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { loadLatest, loadStatus, type Card, type Gap, type Latest, type Status } from '../data';
 import { faAgo, faDate, faDateTime, faNum, faPct } from '../format';
+import AlertsSection from './AlertsSection';
 
 const SECTIONS: { title: string; ids: string[] }[] = [
   { title: 'قیمت جهانی', ids: ['lme_cash', 'comex', 'shfe'] },
@@ -52,6 +53,7 @@ export default function Home() {
         </section>
       ))}
       {latest.cards.ime_ingot?.detail && <ImeTable c={latest.cards.ime_ingot} />}
+      <AlertsSection latest={latest} />
       {status && <StatusList s={status} />}
     </div>
   );

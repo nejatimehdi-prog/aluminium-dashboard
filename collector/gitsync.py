@@ -63,7 +63,7 @@ def resolve_conflicts() -> None:
             merged = merge_series(_stage(f, 2), _stage(f, 3))
         elif f == "data/latest.json":
             merged = _stage(f, 2)  # rebuilt after the rebase
-        elif f in ("data/forecast.json", "data/production.json", "data/trade.json"):
+        elif f in ("data/forecast.json", "data/production.json", "data/trade.json", "data/alerts.json"):
             # written by one workflow at a time; keep the newer one
             a, b = _stage(f, 2), _stage(f, 3)
             merged = b if (b.get("generated_at") or "") >= (a.get("generated_at") or "") else a

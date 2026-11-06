@@ -165,7 +165,25 @@ export interface Forecast {
   history: { iran: [string, number][]; lme: [string, number][] };
 }
 
-export const loadProduction = () => getJson<Production>('production.json');
+export interface AlertRule {
+  id: string;
+  series: string;
+  op: 'above' | 'below' | 'change_above' | 'stale';
+  value?: number;
+  enabled: boolean;
+  status: 'met' | 'not_met' | 'no_data' | 'disabled';
+  current?: number | null;
+  last_sent_at?: string | null;
+  last_message?: string | null;
+}
+export interface Alerts {
+  generated_at: string;
+  configured: boolean;
+  rules: AlertRule[];
+}
+export const loadAlerts = () => getJson<Alerts>('alerts.json');
+
+export const loadProduction =() => getJson<Production>('production.json');
 export const loadTrade = () => getJson<Trade>('trade.json');
 export const loadForecast = () => getJson<Forecast>('forecast.json');
 

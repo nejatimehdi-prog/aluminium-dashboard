@@ -177,6 +177,31 @@ workflowهای زمان‌بندی‌شده:
 - `status.json`: از هر منبع، اجرای جدیدتر می‌ماند.
 - سری‌ها: نقطه‌ها بر اساس تاریخ ادغام می‌شوند.
 
+## هشدار قیمت روی گوشی (ntfy)
+
+بعد از هر اجرای «collect prices»، قانون‌های `data/manual/alerts.json` بررسی می‌شوند. هر قانونی که برقرار شود، از طریق [ntfy.sh](https://ntfy.sh) (رایگان، بدون حساب) پیام می‌فرستد.
+
+۱. **یک topic محرمانه انتخاب کنید.** نام topic مثل رمز است: هر کس آن را بداند، پیام‌ها را می‌بیند. یک رشتهٔ طولانی و تصادفی بسازید، مثل `alu-k3v9x2m7q8w1z5r4`. آن را **در ریپو ننویسید**.
+۲. در GitHub بروید به **Settings → Secrets and variables → Actions → New repository secret**:
+   - Name: `NTFY_TOPIC`
+   - Secret: همان topic
+۳. اپ **ntfy** را نصب کنید ([iOS](https://apps.apple.com/app/ntfy/id1625396347)، [Android](https://play.google.com/store/apps/details?id=io.heckel.ntfy)). **+** را بزنید و همان topic را با سرور پیش‌فرض `ntfy.sh` اضافه کنید.
+۴. برای آزمایش، در PowerShell:
+
+```powershell
+$env:NTFY_TOPIC = "<topic>"; .venv\Scripts\python check_alerts.py --test
+```
+
+قانون‌ها:
+
+| op | معنی |
+|---|---|
+| `above` / `below` | عبور از یک سطح. با هر عبور یک بار پیام می‌آید، نه هر ۳۰ دقیقه. |
+| `change_above` | تغییر بیش از X درصد نسبت به دادهٔ قبلی. برای هر دادهٔ جدید یک بار. |
+| `stale` | منبع به‌روز نشده. روزی یک بار. |
+
+وضعیت هر قانون در پایین صفحهٔ خانهٔ اپ نمایش داده می‌شود.
+
 ## نصب اپ
 
 **ویندوز (Chrome یا Edge):**
