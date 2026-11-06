@@ -1,0 +1,13 @@
+{
+ "id": "fx_free",
+ "points": [],
+ "title": "دلار بازار آزاد",
+ "group": "fx",
+ "collector": "manual",
+ "unit": "toman/USD",
+ "unit_fa": "تومان بر دلار",
+ "freq": "manual",
+ "source": "ورود دستی (data/manual/fx_free_market.csv)",
+ "source_url": "",
+ "fetched_at": "2026-11-06T18:48:13Z"
+}

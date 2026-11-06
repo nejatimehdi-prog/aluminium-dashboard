@@ -1,0 +1,16 @@
+{
+ "id": "fx_ime",
+ "points": [
+  ["2026-11-03", 187444],
+  ["2026-11-04", 187819]
+ ],
+ "title": "دلار بورس کالا",
+ "group": "fx",
+ "collector": "ime_fx",
+ "unit": "toman/USD",
+ "unit_fa": "تومان بر دلار",
+ "freq": "daily",
+ "source": "بورس کالای ایران — نرخ تسویه",
+ "source_url": "https://www.ime.co.ir/",
+ "fetched_at": "2026-11-06T18:48:13Z"
+}

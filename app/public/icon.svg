@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#1c5cab"/>
+  <!-- two stacked ingots -->
+  <path d="M136 300 L176 236 H336 L376 300 Z" fill="#e8eef6"/>
+  <path d="M136 300 H376 V328 H136 Z" fill="#b9c6d8"/>
+  <path d="M196 220 L228 168 H372 L404 220 Z" fill="#d3dde9"/>
+  <path d="M196 220 H404 V242 H196 Z" fill="#9fb0c7"/>
+  <!-- rising line -->
+  <path d="M108 404 L196 372 L268 386 L404 324" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

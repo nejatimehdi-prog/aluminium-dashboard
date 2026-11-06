@@ -1,0 +1,32 @@
+{
+  "name": "aluminium-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "icons": "pwa-assets-generator"
+  },
+  "dependencies": {
+    "date-fns": "4.1.0",
+    "date-fns-jalali": "4.1.0-0",
+    "echarts": "5.6.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "vazirmatn": "33.0.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.10",
+    "@types/node": "22.15.30",
+    "@types/react": "18.3.23",
+    "@types/react-dom": "18.3.7",
+    "@vite-pwa/assets-generator": "1.0.0",
+    "@vitejs/plugin-react": "4.5.2",
+    "tailwindcss": "4.1.10",
+    "typescript": "5.8.3",
+    "vite": "6.3.5",
+    "vite-plugin-pwa": "1.0.0"
+  }
+}

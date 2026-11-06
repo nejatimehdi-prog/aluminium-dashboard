@@ -1,0 +1,13 @@
+{
+ "id": "iran_free_market",
+ "points": [],
+ "title": "شمش — بازار آزاد",
+ "group": "iran",
+ "collector": "manual",
+ "unit": "toman/kg",
+ "unit_fa": "تومان بر کیلوگرم",
+ "freq": "manual",
+ "source": "ورود دستی (data/manual/iran_free_market.csv)",
+ "source_url": "",
+ "fetched_at": "2026-11-06T18:48:13Z"
+}
