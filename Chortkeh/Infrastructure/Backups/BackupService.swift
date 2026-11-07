@@ -52,19 +52,31 @@ struct BackupPayload: Codable {
     struct AttachmentRecord: Codable { var id: UUID; var ownerId: UUID; var fileName: String; var data: Data?; var createdAt: Date; var updatedAt: Date }
     struct AuditRecord: Codable { var id: UUID; var timestamp: Date; var action: String; var entityType: String; var entityId: UUID?; var summary: String }
 
-    var counts: [(String, Int)] {
+    var counts: [BackupCount] {
         [
-            ("حساب", accounts.count), ("طرف حساب", contacts.count), ("تراکنش", transactions.count),
-            ("طلب/بدهی", obligations.count), ("چک", cheques.count), ("تسویه", settlements.count),
-            ("قاعده تکرار", recurringRules.count), ("دسته", categories.count), ("پیوست", attachments.count)
+            BackupCount(title: "حساب", count: accounts.count),
+            BackupCount(title: "طرف حساب", count: contacts.count),
+            BackupCount(title: "تراکنش", count: transactions.count),
+            BackupCount(title: "طلب/بدهی", count: obligations.count),
+            BackupCount(title: "چک", count: cheques.count),
+            BackupCount(title: "تسویه", count: settlements.count),
+            BackupCount(title: "قاعده تکرار", count: recurringRules.count),
+            BackupCount(title: "دسته", count: categories.count),
+            BackupCount(title: "پیوست", count: attachments.count)
         ]
     }
+}
+
+struct BackupCount: Identifiable {
+    var id: String { title }
+    let title: String
+    let count: Int
 }
 
 struct BackupPreview {
     let payload: BackupPayload
     var createdAt: Date { payload.createdAt }
-    var counts: [(String, Int)] { payload.counts }
+    var counts: [BackupCount] { payload.counts }
 }
 
 /// Builds, validates and restores encrypted backups.

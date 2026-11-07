@@ -5,15 +5,20 @@ import XCTest
 /// End-to-end tests through the real SwiftData store (in memory): scenarios 1–10, 16, 18, 20.
 @MainActor
 final class LedgerServiceIntegrationTests: XCTestCase {
-    var container: ModelContainer!
-    var service: LedgerService!
-    let fixedNow = CivilDate(jalaliYear: 1405, month: 8, day: 16)!.date(hour: 10)
+    private var container: ModelContainer?
+    private var cachedService: LedgerService?
+    private let fixedNow = CivilDate(jalaliYear: 1405, month: 8, day: 16)!.date(hour: 10)
 
-    override func setUp() async throws {
-        container = try PersistenceController.makeContainer(inMemory: true)
+    /// Fresh in-memory store per test (XCTest creates a new instance for every test method).
+    private var service: LedgerService {
+        if let cachedService { return cachedService }
+        let c = try! PersistenceController.makeContainer(inMemory: true)
+        container = c
         let now = fixedNow
-        service = LedgerService(context: container.mainContext, clock: { now })
-        try service.seedDefaultCategoriesIfNeeded()
+        let s = LedgerService(context: c.mainContext, clock: { now })
+        try! s.seedDefaultCategoriesIfNeeded()
+        cachedService = s
+        return s
     }
 
     private func m(_ million: Int64) -> Money { try! Money.toman(million * 1_000_000) }
@@ -240,6 +245,24 @@ final class BackupRestoreIntegrationTests: XCTestCase {
         XCTAssertEqual(Set(restored.cheques), Set(original.cheques))
         XCTAssertEqual(Set(restored.obligations), Set(original.obligations))
         XCTAssertEqual(restored.categories.count, original.categories.count)
+    }
+
+    func testRestoreOverSameStoreReplacesData() throws {
+        let s = try makeService()
+        let a = try s.addAccount(name: "ملت", kind: .bank, openingBalance: m(10))
+        try s.recordExpense(amount: m(1), accountId: a, date: s.today)
+        let backup = BackupService(service: s, attachmentStore: nil)
+        let data = try backup.exportEncrypted(password: "password-123", preferences: nil, iterations: 2_000)
+        let before = try s.loadSnapshot()
+
+        try s.recordExpense(amount: m(5), accountId: a, date: s.today)
+        try s.addAccount(name: "جدید", kind: .cash, openingBalance: m(3))
+        try backup.restore(try backup.inspect(data, password: "password-123"))
+
+        let after = try s.loadSnapshot()
+        XCTAssertEqual(Set(after.accounts), Set(before.accounts))
+        XCTAssertEqual(Set(after.transactions.map(\.id)), Set(before.transactions.map(\.id)))
+        XCTAssertEqual(try FinancialCalculator.totalCash(after), m(9))
     }
 
     func testInvalidBackupDoesNotTouchExistingData() throws {

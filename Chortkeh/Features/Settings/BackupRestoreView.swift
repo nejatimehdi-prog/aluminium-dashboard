@@ -45,8 +45,8 @@ struct BackupRestoreView: View {
                 }
                 if let preview {
                     InfoRow(title: "تاریخ پشتیبان", value: PersianFormat.date(CivilDate.from(preview.createdAt), style: .long))
-                    ForEach(preview.counts, id: \.0) { item in
-                        InfoRow(title: item.0, value: PersianFormat.number(item.1))
+                    ForEach(preview.counts) { item in
+                        InfoRow(title: item.title, value: PersianFormat.number(item.count))
                     }
                     Button("جایگزینی اطلاعات فعلی با این پشتیبان", role: .destructive) { confirmRestore = true }
                 }

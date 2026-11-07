@@ -219,8 +219,9 @@ enum ForecastEngine {
             days.append(ForecastDay(date: d, inflow: inflow, outflow: outflow, endBalance: balance))
         }
 
-        let firstShortfall = days.first { $0.endBalance.isNegative }
-        let firstReserveBreach = input.reserve.isPositive ? days.first { $0.endBalance < input.reserve } : nil
+        let firstShortfall = days.first(where: { $0.endBalance.isNegative })
+        let reserve = input.reserve
+        let firstReserveBreach: ForecastDay? = reserve.isPositive ? days.first(where: { $0.endBalance < reserve }) : nil
         let minimumDay = days.min { $0.endBalance < $1.endBalance }
         let minBalance = minimumDay?.endBalance ?? startBalance
         let required = try (minBalance.isNegative ? minBalance.negated() : Money.zero)

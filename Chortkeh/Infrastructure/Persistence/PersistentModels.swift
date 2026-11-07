@@ -4,6 +4,8 @@ import SwiftData
 // SwiftData models. References between records are plain UUIDs (no @Relationship), so nothing is ever
 // cascade-deleted behind the user's back and backups are a straightforward copy.
 // Enums are stored as raw strings; amounts as Int64 rials; calendar days as Julian Day Numbers.
+// `id` values are random UUIDs; uniqueness is also validated on restore. No `.unique` attribute is used so that
+// a restore (delete all + insert in one save) never triggers SwiftData's implicit upsert behaviour.
 
 enum SchemaV1: VersionedSchema {
     static var versionIdentifier = Schema.Version(1, 0, 0)
@@ -17,7 +19,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class FinancialAccount {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var name: String
         var kindRaw: String
         var openingBalanceRials: Int64
@@ -40,7 +42,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class Contact {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var name: String
         var phone: String
         var note: String
@@ -59,7 +61,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class MoneyTransaction {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var kindRaw: String
         var amountRials: Int64
         var dayNumber: Int
@@ -105,7 +107,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class Obligation {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var directionRaw: String
         var contactId: UUID
         var principalRials: Int64
@@ -137,7 +139,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class Cheque {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var directionRaw: String
         var amountRials: Int64
         var dueDayNumber: Int
@@ -180,7 +182,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class Settlement {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var obligationId: UUID?
         var chequeId: UUID?
         var amountRials: Int64
@@ -212,7 +214,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class RecurringRule {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var title: String
         var kindRaw: String
         var amountRials: Int64
@@ -253,7 +255,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class Budget {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         /// nil = overall monthly budget for variable spending.
         var categoryId: UUID?
         var monthlyLimitRials: Int64
@@ -271,7 +273,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class ExpenseCategory {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var name: String
         var symbol: String
         var sortOrder: Int
@@ -292,7 +294,7 @@ enum SchemaV1: VersionedSchema {
 
     @Model
     final class Attachment {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var ownerId: UUID
         /// File name inside the encrypted attachments directory.
         var fileName: String
@@ -311,7 +313,7 @@ enum SchemaV1: VersionedSchema {
     /// Local, append-only audit trail of financial operations.
     @Model
     final class AuditEvent {
-        @Attribute(.unique) var id: UUID
+        var id: UUID
         var timestamp: Date
         var action: String
         var entityType: String

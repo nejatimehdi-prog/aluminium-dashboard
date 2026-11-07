@@ -14,7 +14,7 @@ enum PersistenceController {
     static func makeContainer(inMemory: Bool = false) throws -> ModelContainer {
         let schema = Schema(versionedSchema: SchemaV1.self)
         if inMemory {
-            let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true)
+            let config = ModelConfiguration(schema: schema, isStoredInMemoryOnly: true, cloudKitDatabase: .none)
             return try ModelContainer(for: schema, migrationPlan: ChortkehMigrationPlan.self, configurations: [config])
         }
         let fm = FileManager.default
@@ -26,7 +26,7 @@ enum PersistenceController {
         values.isExcludedFromBackup = true
         try? dir.setResourceValues(values)
         let url = dir.appendingPathComponent(storeName)
-        let config = ModelConfiguration(schema: schema, url: url)
+        let config = ModelConfiguration(schema: schema, url: url, cloudKitDatabase: .none)
         let container = try ModelContainer(for: schema, migrationPlan: ChortkehMigrationPlan.self, configurations: [config])
         applyFileProtection()
         return container
