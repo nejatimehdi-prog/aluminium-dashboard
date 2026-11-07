@@ -1477,7 +1477,8 @@
   ["2026-11-02", 3095.0],
   ["2026-11-03", 3082.0],
   ["2026-11-04", 3135.0],
-  ["2026-11-05", 3160.0]
+  ["2026-11-05", 3160.0],
+  ["2026-11-06", 3117.0]
  ],
  "title": "LME نقدی",
  "group": "world",
@@ -1487,5 +1488,5 @@
  "freq": "daily",
  "source": "Westmetall (LME Cash-Settlement)",
  "source_url": "https://www.westmetall.com/en/markdaten.php?action=table&field=LME_Al_cash",
- "fetched_at": "2026-11-06T22:07:29Z"
+ "fetched_at": "2026-11-07T17:59:30Z"
 }

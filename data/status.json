@@ -2,27 +2,27 @@
  "collectors": {
   "westmetall": {
    "title": "LME — Westmetall",
-   "last_attempt": "2026-11-07T00:00:01Z",
+   "last_attempt": "2026-11-07T17:59:29Z",
    "ok": true,
-   "last_success": "2026-11-07T00:00:01Z",
+   "last_success": "2026-11-07T17:59:29Z",
    "error": null,
-   "note": "skipped (fetched < 3h ago)"
+   "note": "216 rows, 1 new/changed, last 2026-11-06 = 3117.0"
   },
   "yahoo": {
    "title": "COMEX و یوان — Yahoo",
-   "last_attempt": "2026-11-07T00:00:01Z",
+   "last_attempt": "2026-11-07T17:59:30Z",
    "ok": true,
-   "last_success": "2026-11-07T00:00:01Z",
+   "last_success": "2026-11-07T17:59:30Z",
    "error": null,
-   "note": "ALI=F=3200.0, CNY=X=6.6648"
+   "note": "ALI=F=3191.5, CNY=X=6.6648"
   },
   "sina": {
    "title": "شانگهای — Sina",
-   "last_attempt": "2026-11-07T00:00:01Z",
+   "last_attempt": "2026-11-07T17:59:30Z",
    "ok": true,
-   "last_success": "2026-11-07T00:00:01Z",
+   "last_success": "2026-11-07T17:59:30Z",
    "error": null,
-   "note": "25 days, 0 new/changed, last 2026-11-06 = 23030.0 CNY/t"
+   "note": "25 days, 1 new/changed, last 2026-11-06 = 23030.0 CNY/t"
   },
   "ime": {
    "title": "بورس کالا — معاملات شمش",
@@ -42,17 +42,17 @@
   },
   "manual": {
    "title": "فایل‌های ورود دستی",
-   "last_attempt": "2026-11-07T00:00:05Z",
+   "last_attempt": "2026-11-07T17:59:32Z",
    "ok": true,
-   "last_success": "2026-11-07T00:00:05Z",
+   "last_success": "2026-11-07T17:59:32Z",
    "error": null,
    "note": "iran_free_market.csv: 0 rows, fx_free_market.csv: 0 rows"
   },
   "summary": {
    "title": "ساخت latest.json",
-   "last_attempt": "2026-11-07T00:00:05Z",
+   "last_attempt": "2026-11-07T17:59:32Z",
    "ok": true,
-   "last_success": "2026-11-07T00:00:05Z",
+   "last_success": "2026-11-07T17:59:32Z",
    "error": null,
    "note": "5/7 cards with data"
   },
@@ -74,12 +74,12 @@
   },
   "alerts": {
    "title": "هشدار قیمت — ntfy",
-   "last_attempt": "2026-11-07T00:00:05Z",
+   "last_attempt": "2026-11-07T18:03:45Z",
    "ok": true,
-   "last_success": "2026-11-07T00:00:05Z",
+   "last_success": "2026-11-07T18:03:45Z",
    "error": null,
-   "note": "1 sent, 2 rules met"
+   "note": "0 sent, 2 rules met"
   }
  },
- "updated_at": "2026-11-07T17:55:13Z"
+ "updated_at": "2026-11-07T18:03:45Z"
 }

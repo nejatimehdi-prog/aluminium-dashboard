@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T00:00:05Z",
+ "generated_at": "2026-11-07T18:03:45Z",
  "configured": true,
  "rules": [
   {
@@ -12,7 +12,7 @@
    "last_sent_at": null,
    "last_message": null,
    "status": "not_met",
-   "current": 3160.0
+   "current": 3117.0
   },
   {
    "id": "lme_below",
@@ -24,7 +24,7 @@
    "last_sent_at": null,
    "last_message": null,
    "status": "not_met",
-   "current": 3160.0
+   "current": 3117.0
   },
   {
    "id": "lme_move",
@@ -36,7 +36,7 @@
    "last_sent_at": null,
    "last_message": null,
    "status": "not_met",
-   "current": 3160.0
+   "current": 3117.0
   },
   {
    "id": "ime_above",
