@@ -14,15 +14,15 @@ struct AmountField: View {
                 .font(.title3.monospacedDigit().weight(.semibold))
                 .multilineTextAlignment(.leading)
                 .accessibilityIdentifier(identifier)
+                .accessibilityHint("مبلغ به \(unit.title)")
                 .onChange(of: text) { _, newValue in
                     let formatted = AmountInputParser.formatForEditing(newValue)
                     if formatted != newValue { text = formatted }
                 }
             Text(unit.title)
                 .foregroundStyle(Theme.textSecondary)
+                .accessibilityHidden(true)
         }
-        .accessibilityElement(children: .combine)
-        .accessibilityHint("مبلغ به \(unit.title)")
     }
 }
 

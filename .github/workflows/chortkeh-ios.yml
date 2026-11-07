@@ -89,6 +89,12 @@ jobs:
             -resultBundlePath TestResults/ui.xcresult \
             CODE_SIGNING_ALLOWED=NO 2>&1 | tee ui.log | grep -E "Test Case .*(passed|failed)|error:|Executed|TEST (SUCCEEDED|FAILED)"
 
+      - name: Show UI test failure details
+        if: failure()
+        run: |
+          sed -n '/UI-HIERARCHY-BEGIN/,/UI-HIERARCHY-END/p' ui.log | head -400 || true
+          grep -E "error:" -A5 ui.log | head -100 || true
+
       - name: Test summary
         if: always()
         run: |

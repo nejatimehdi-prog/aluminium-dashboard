@@ -27,6 +27,16 @@ final class ChortkehUITests: XCTestCase {
         }
     }
 
+    /// Waits for an element; on failure, logs the visible UI hierarchy so CI shows what was on screen.
+    @discardableResult
+    private func require(_ element: XCUIElement, in app: XCUIApplication, timeout: TimeInterval = 10,
+                         file: StaticString = #filePath, line: UInt = #line) -> Bool {
+        if element.waitForExistence(timeout: timeout) { return true }
+        print("UI-HIERARCHY-BEGIN\n\(app.debugDescription)\nUI-HIERARCHY-END")
+        XCTFail("Element not found: \(element)", file: file, line: line)
+        return false
+    }
+
     // 21. Empty first launch: onboarding can be skipped; dashboard shows "balance not recorded", not zero.
     func testEmptyStateAndOnboardingSkip() {
         let app = launch()
@@ -54,7 +64,7 @@ final class ChortkehUITests: XCTestCase {
         expense.tap()
 
         let amount = app.textFields["amountField"]
-        XCTAssertTrue(amount.waitForExistence(timeout: 10))
+        require(amount, in: app)
         amount.tap()
         amount.typeText("150000")
         snapshot(app, "05-expense-form")
@@ -74,7 +84,7 @@ final class ChortkehUITests: XCTestCase {
         XCTAssertTrue(cheque.waitForExistence(timeout: 5))
         cheque.tap()
         let amount = app.textFields["amountField"]
-        XCTAssertTrue(amount.waitForExistence(timeout: 10))
+        require(amount, in: app)
         amount.tap()
         amount.typeText("300000000")
         let contact = app.textFields["contactField"]
