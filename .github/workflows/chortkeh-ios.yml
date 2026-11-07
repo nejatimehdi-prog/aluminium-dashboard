@@ -1,0 +1,121 @@
+name: chortkeh-ios
+
+on:
+  push:
+    branches: [main, "claude/chortkeh-ios-app-*"]
+    paths: ["Chortkeh/**", ".github/workflows/chortkeh-ios.yml"]
+  pull_request:
+    paths: ["Chortkeh/**", ".github/workflows/chortkeh-ios.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: chortkeh-ios-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    timeout-minutes: 75
+    defaults:
+      run:
+        working-directory: Chortkeh
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Toolchain
+        run: |
+          xcodebuild -version
+          swift --version
+          brew install xcodegen
+          xcodegen --version
+
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Pick simulator (iPhone 13 preferred)
+        run: |
+          RUNTIME=$(xcrun simctl list runtimes available -j | python3 -c '
+          import json,sys
+          rs=[r for r in json.load(sys.stdin)["runtimes"] if r.get("platform","")=="iOS" or r["identifier"].find("iOS")>=0]
+          rs.sort(key=lambda r: [int(x) for x in r["version"].split(".")])
+          print(rs[-1]["identifier"])')
+          echo "Runtime: $RUNTIME"
+          UDID=$(xcrun simctl create "Chortkeh iPhone 13" com.apple.CoreSimulator.SimDeviceType.iPhone-13 "$RUNTIME" 2>/dev/null || true)
+          DEVICE="iPhone 13"
+          if [ -z "$UDID" ]; then
+            UDID=$(xcrun simctl create "Chortkeh iPhone 16" com.apple.CoreSimulator.SimDeviceType.iPhone-16 "$RUNTIME")
+            DEVICE="iPhone 16 (iPhone 13 device type unavailable on this runner)"
+          fi
+          echo "SIM_UDID=$UDID" >> "$GITHUB_ENV"
+          echo "Simulator: $DEVICE / $UDID"
+          echo "SIM_NAME=$DEVICE" >> "$GITHUB_ENV"
+
+      - name: Build for testing
+        run: |
+          set -o pipefail
+          xcodebuild build-for-testing \
+            -project Chortkeh.xcodeproj -scheme Chortkeh \
+            -destination "id=$SIM_UDID" \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee build.log | grep -E "error:|warning: .*(deprecated|unused)|BUILD (SUCCEEDED|FAILED)" || true
+          grep -q "TEST BUILD SUCCEEDED\|BUILD SUCCEEDED" build.log
+
+      - name: Show compile errors
+        if: failure()
+        run: grep -E "error:" -A3 build.log | head -200
+
+      - name: Unit and integration tests
+        run: |
+          set -o pipefail
+          xcodebuild test-without-building \
+            -project Chortkeh.xcodeproj -scheme Chortkeh \
+            -destination "id=$SIM_UDID" \
+            -derivedDataPath build/DerivedData \
+            -only-testing:ChortkehTests \
+            -resultBundlePath TestResults/unit.xcresult \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee unit.log | grep -E "Test Case .*(passed|failed)|error:|Executed|TEST (SUCCEEDED|FAILED)"
+
+      - name: UI tests (with screenshots)
+        env:
+          TEST_RUNNER_SCREENSHOT_DIR: ${{ github.workspace }}/Chortkeh/screenshots
+        run: |
+          set -o pipefail
+          mkdir -p screenshots
+          xcodebuild test-without-building \
+            -project Chortkeh.xcodeproj -scheme Chortkeh \
+            -destination "id=$SIM_UDID" \
+            -derivedDataPath build/DerivedData \
+            -only-testing:ChortkehUITests \
+            -resultBundlePath TestResults/ui.xcresult \
+            CODE_SIGNING_ALLOWED=NO 2>&1 | tee ui.log | grep -E "Test Case .*(passed|failed)|error:|Executed|TEST (SUCCEEDED|FAILED)"
+
+      - name: Test summary
+        if: always()
+        run: |
+          {
+            echo "## Chortkeh iOS"
+            echo "Simulator: ${SIM_NAME:-unknown}"
+            echo '```'
+            grep -hE "Executed [0-9]+ tests|TEST (SUCCEEDED|FAILED)|BUILD (SUCCEEDED|FAILED)" build.log unit.log ui.log 2>/dev/null | tail -20
+            grep -hE "error:|failed \(" unit.log ui.log 2>/dev/null | head -60
+            echo '```'
+            ls screenshots 2>/dev/null
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chortkeh-screenshots
+          path: Chortkeh/screenshots
+          if-no-files-found: ignore
+
+      - name: Upload test results and logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: chortkeh-test-results
+          path: |
+            Chortkeh/TestResults
+            Chortkeh/*.log
+          if-no-files-found: ignore
