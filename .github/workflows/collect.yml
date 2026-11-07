@@ -48,6 +48,8 @@ jobs:
       - name: Iran prices (may be blocked outside Iran; then use the local collector)
         run: python collect_iran.py --no-push
         continue-on-error: true
+        # IME can hang from US runners; cap it so the global prices still get committed
+        timeout-minutes: 4
 
       - name: price alerts (ntfy; the topic is a repository secret)
         run: python check_alerts.py
