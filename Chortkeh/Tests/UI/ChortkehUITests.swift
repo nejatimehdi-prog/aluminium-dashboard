@@ -54,7 +54,7 @@ final class ChortkehUITests: XCTestCase {
         expense.tap()
 
         let amount = app.textFields["amountField"]
-        XCTAssertTrue(amount.waitForExistence(timeout: 5))
+        XCTAssertTrue(amount.waitForExistence(timeout: 10))
         amount.tap()
         amount.typeText("150000")
         snapshot(app, "05-expense-form")
@@ -70,9 +70,11 @@ final class ChortkehUITests: XCTestCase {
         let app = launch(["-skipOnboarding", "-seedAccountToman", "200000000"])
         XCTAssertTrue(app.buttons["quickAddButton"].waitForExistence(timeout: 10))
         app.buttons["quickAddButton"].tap()
-        app.buttons["quickEntry.chequeIssued"].tap()
+        let cheque = app.buttons["quickEntry.chequeIssued"]
+        XCTAssertTrue(cheque.waitForExistence(timeout: 5))
+        cheque.tap()
         let amount = app.textFields["amountField"]
-        XCTAssertTrue(amount.waitForExistence(timeout: 5))
+        XCTAssertTrue(amount.waitForExistence(timeout: 10))
         amount.tap()
         amount.typeText("300000000")
         let contact = app.textFields["contactField"]

@@ -48,6 +48,8 @@ enum DashboardSheet: Identifiable {
 struct DashboardView: View {
     @Environment(AppState.self) private var state
     @State private var sheet: DashboardSheet?
+    /// Sheet to present once the current one has fully dismissed (presenting during dismissal is dropped by SwiftUI).
+    @State private var pendingSheet: DashboardSheet?
 
     var body: some View {
         ZStack(alignment: .bottomLeading) {
@@ -84,7 +86,7 @@ struct DashboardView: View {
                 .padding(.bottom, 20)
         }
         .overlay(alignment: .top) { ToastView() }
-        .sheet(item: $sheet) { item in
+        .sheet(item: $sheet, onDismiss: presentPending) { item in
             sheetContent(item)
                 .environment(state)
                 .environment(\.layoutDirection, .rightToLeft)
@@ -97,8 +99,8 @@ struct DashboardView: View {
         switch item {
         case .quickEntry:
             QuickEntrySheet { kind, prefill in
+                pendingSheet = .entry(kind, prefill)
                 sheet = nil
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.35) { sheet = .entry(kind, prefill) }
             }
         case .entry(let kind, let prefill):
             EntryRouter(kind: kind, prefill: prefill)
@@ -125,6 +127,12 @@ struct DashboardView: View {
         case .forecast:
             ForecastDetailSheet()
         }
+    }
+
+    private func presentPending() {
+        guard let next = pendingSheet else { return }
+        pendingSheet = nil
+        sheet = next
     }
 
     private func open(_ item: ActivityItem) {
