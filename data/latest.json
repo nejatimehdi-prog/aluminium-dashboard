@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T23:08:37Z",
+ "generated_at": "2026-11-07T00:00:05Z",
  "order": ["lme_cash", "comex", "shfe", "ime_ingot", "iran_free_market", "fx_free", "fx_ime"],
  "cards": {
   "lme_cash": {
@@ -29,7 +29,7 @@
    "source_url": "https://finance.yahoo.com/quote/ALI=F",
    "freq": "intraday",
    "id": "comex",
-   "fetched_at": "2026-11-06T23:08:33Z",
+   "fetched_at": "2026-11-07T00:00:01Z",
    "value": 3200.0,
    "date": "2026-11-06",
    "time": "2026-11-06T21:52:50Z",
@@ -48,7 +48,7 @@
    "source_url": "https://finance.sina.com.cn/futures/quotes/AL0.shtml",
    "freq": "daily",
    "id": "shfe",
-   "fetched_at": "2026-11-06T23:08:36Z",
+   "fetched_at": "2026-11-07T00:00:04Z",
    "value": 3455.5,
    "date": "2026-11-06",
    "prev_date": "2026-11-05",
@@ -72,8 +72,8 @@
    "prev_date": "2026-10-26",
    "prev_value": 719244,
    "change_pct": 3.5,
-   "stale": false,
-   "stale_reason": null,
+   "stale": true,
+   "stale_reason": "آخرین داده 6 روز پیش است",
    "detail": {
     "date": "2026-11-01",
     "trades": [
@@ -143,7 +143,7 @@
    "source_url": "",
    "freq": "manual",
    "id": "iran_free_market",
-   "fetched_at": "2026-11-06T23:08:36Z",
+   "fetched_at": "2026-11-07T00:00:05Z",
    "value": null,
    "stale": true,
    "stale_reason": "هنوز داده‌ای ثبت نشده"
@@ -157,7 +157,7 @@
    "source_url": "",
    "freq": "manual",
    "id": "fx_free",
-   "fetched_at": "2026-11-06T23:08:36Z",
+   "fetched_at": "2026-11-07T00:00:05Z",
    "value": null,
    "stale": true,
    "stale_reason": "هنوز داده‌ای ثبت نشده"
@@ -194,6 +194,6 @@
    "fx": "2026-11-04"
   },
   "source": "محاسبه: بورس کالا — شمش خالص ÷ (LME نقدی × دلار بورس کالا)",
-  "stale": false
+  "stale": true
  }
 }
