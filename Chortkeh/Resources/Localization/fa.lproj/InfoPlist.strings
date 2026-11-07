@@ -1,0 +1,4 @@
+"CFBundleDisplayName" = "چُرتکه";
+"NSFaceIDUsageDescription" = "چُرتکه برای قفل‌کردن اطلاعات مالی شما از Face ID استفاده می‌کند.";
+"NSContactsUsageDescription" = "فقط برای انتخاب نام و شماره طرف حساب؛ اطلاعات مخاطبان از دستگاه خارج نمی‌شود.";
+"NSPhotoLibraryUsageDescription" = "برای افزودن تصویر چک به‌صورت رمزگذاری‌شده روی همین دستگاه.";
